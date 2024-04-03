@@ -1,3 +1,4 @@
+#% ------------------------------------------------------------------------------
 # -*- coding: utf-8 -*-
 """
 Created on Wed Mar 20 03:01:49 2024
@@ -62,7 +63,7 @@ def get_train_test_sets(data, seq_len, train_frac):
 
 x_train, y_train, x_test, y_test = get_train_test_sets(scaled_close, seq_len, train_frac=0.9)
 
-
+# ------------------- LSTM -------------------
 from tensorflow import keras
 from keras.layers import Bidirectional, Dropout, Activation, Dense, LSTM
 from keras.models import Sequential
