@@ -8,6 +8,7 @@ https://medium.com/codex/time-series-prediction-using-lstm-in-python-19b1187f580
 import ccxt
 import pandas as pd
 import numpy as np
+# import tensorflow as tensorflow
 
 ex = ccxt.binance()
 
@@ -63,9 +64,8 @@ x_train, y_train, x_test, y_test = get_train_test_sets(scaled_close, seq_len, tr
 
 
 from tensorflow import keras
-from tensorflow.keras.layers import Bidirectional, Dropout, Activation, Dense, LSTM
-from tensorflow.compat.v1.keras.layers import CuDNNLSTM
-from tensorflow.keras.models import Sequential
+from keras.layers import Bidirectional, Dropout, Activation, Dense, LSTM
+from keras.models import Sequential
 
 # fraction of the input to drop; helps prevent overfitting
 dropout = 0.2
