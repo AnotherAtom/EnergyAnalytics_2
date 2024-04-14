@@ -102,7 +102,6 @@ for i in range(N):
 rolling_forecast = [0 if x < 0 else x for x in rolling_forecast]
 #%%
 
-'''
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 # Truncate the test set if it's longer than the forecasts
@@ -118,7 +117,7 @@ mae_persistence = mean_absolute_error(test_trimmed, Persistence24)
 
 rmse_forecast, mae_forecast, rmse_persistence, mae_persistence
 
-'''
+
 #%%
 plt.figure(figsize=(10, 6), dpi=100)  # Increase figure size
 plt.plot(np.arange(1, len(train) + 1), train, color="black", linewidth=1)
